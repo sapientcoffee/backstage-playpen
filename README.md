@@ -1,4 +1,10 @@
-# backstage-playpen
+# [Backstage](https://backstage.io)
 
+This is your newly scaffolded Backstage App, Good Luck!
 
-https://backstage.io/docs/getting-started/create-an-app/
+To start the app, run:
+
+```sh
+yarn install
+yarn dev
+```

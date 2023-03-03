@@ -1,0 +1,24 @@
+steps:
+  # Docker Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['pull', 'docker/dockerfile:experimental']
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '.',
+        '-f',
+        'packages/backend/Dockerfile',
+        '-t',
+        'us-west1-docker.pkg.dev/your-project-id/your-repository/your-repository:dev',
+      ]
+    env:
+      - 'DOCKER_BUILDKIT=1'
+ 
+    # Docker Push
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'us-west1-docker.pkg.dev/your-project-id/your-repository/your-repository:dev',
+      ]
