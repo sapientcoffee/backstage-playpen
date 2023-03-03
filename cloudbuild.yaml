@@ -10,7 +10,7 @@ steps:
         '-f',
         'packages/backend/Dockerfile',
         '-t',
-        'us-west1-docker.pkg.dev/your-project-id/your-repository/your-repository:dev',
+        'europe-west2-docker.pkg.dev/coffee-with-platforms/backstage/backstage:dev',
       ]
     env:
       - 'DOCKER_BUILDKIT=1'
@@ -20,5 +20,5 @@ steps:
     args:
       [
         'push',
-        'us-west1-docker.pkg.dev/your-project-id/your-repository/your-repository:dev',
+        'europe-west2-docker.pkg.dev/coffee-with-platforms/backstage/backstage:dev',
       ]
